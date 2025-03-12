@@ -60,28 +60,30 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({
   }, [threshold, once]);
 
   const animationMap: Record<AnimationVariant, string> = {
-    'fade-in': 'animate-fade-in opacity-0',
-    'fade-up': 'animate-fade-up opacity-0',
-    'scale-in': 'animate-scale-in opacity-0',
+    'fade-in': 'animate-fade-in',
+    'fade-up': 'animate-fade-up',
+    'scale-in': 'animate-scale-in',
     'slide-in-right': 'animate-slide-in-right',
     'none': '',
   };
 
   const animationClass = animationMap[animation];
   const animationDelay = delay ? `delay-[${delay}ms]` : '';
-  const animationStyle = { animationPlayState: isVisible ? 'running' : 'paused' };
-
+  
   return (
     <div
       ref={ref}
       className={cn(
         isVisible ? animationClass : 'opacity-0',
+        isVisible ? 'opacity-100' : 'opacity-0', // Ensure opacity is 100% when visible
         animationDelay,
         className
       )}
       style={{
-        ...animationStyle,
+        animationPlayState: isVisible ? 'running' : 'paused',
         animationDelay: `${delay}ms`,
+        // Make sure elements stay visible after animation completes
+        animationFillMode: 'forwards'
       }}
     >
       {children}
