@@ -20,9 +20,8 @@ const Navbar: React.FC = () => {
       <Container maxWidth="xl">
         <nav className="flex items-center justify-between py-3">
           <a href="#" className="text-xl font-bold text-white flex items-center">
-            <span className="text-pet-accent">Paws</span>
-            <span className="text-white">&</span>
-            <span className="text-white">Clean</span>
+            <span className="text-pet-accent">Rex</span>
+            <span className="text-white"> Pet</span>
           </a>
 
           {/* Desktop Navigation */}

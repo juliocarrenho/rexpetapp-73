@@ -20,9 +20,8 @@ const Footer: React.FC = () => {
             <AnimateInView animation="fade-up" delay={100}>
               <div>
                 <h3 className="text-2xl font-bold mb-6 text-white">
-                  <span className="text-pet-primary">Paws</span>
-                  <span className="text-white">&</span>
-                  <span className="text-pet-accent">Soap</span>
+                  <span className="text-pet-primary">Rex</span>
+                  <span className="text-white"> Pet</span>
                 </h3>
                 <p className="text-white/70 mb-6">
                   Professional pet grooming services at your fingertips. Schedule appointments, find groomers, and keep your pets looking their best.
@@ -78,7 +77,7 @@ const Footer: React.FC = () => {
                   </li>
                   <li className="flex items-center">
                     <Mail size={18} className="text-pet-primary mr-3" />
-                    <span className="text-white/70">info@pawsandsoap.com</span>
+                    <span className="text-white/70">info@rexpet.com</span>
                   </li>
                 </ul>
               </div>
@@ -118,7 +117,7 @@ const Footer: React.FC = () => {
           
           <div className="mt-12 pt-8 border-t border-white/10 text-center">
             <p className="text-white/60 text-sm">
-              © {currentYear} Paws & Soap. All rights reserved.
+              © {currentYear} Rex Pet. All rights reserved.
             </p>
           </div>
         </Container>
