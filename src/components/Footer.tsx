@@ -19,10 +19,13 @@ const Footer: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             <AnimateInView animation="fade-up" delay={100}>
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-white">
-                  <span className="text-pet-primary">Rex</span>
-                  <span className="text-white"> Pet</span>
-                </h3>
+                <div className="mb-6">
+                  <img 
+                    src="/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
+                    alt="Rex Pet Logo" 
+                    className="h-12"
+                  />
+                </div>
                 <p className="text-white/70 mb-6">
                   Professional pet grooming services at your fingertips. Schedule appointments, find groomers, and keep your pets looking their best.
                 </p>
