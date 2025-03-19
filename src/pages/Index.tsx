@@ -9,7 +9,7 @@ const Index: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-pet-primary/90 to-black text-white overflow-hidden">
       <Navbar />
-      <main className="flex flex-col gap-6 md:gap-8 pb-8 md:pb-12">
+      <main className="flex flex-col gap-6 md:gap-8 pb-8 md:pb-12 mt-[25px] md:mt-0">
         <Hero />
         <Features />
       </main>
