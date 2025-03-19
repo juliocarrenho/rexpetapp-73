@@ -4,12 +4,15 @@ import { Apple, Smartphone } from 'lucide-react';
 import AnimateInView from './AnimateInView';
 import Container from './ui/container';
 import LeadCapture from './LeadCapture';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Hero: React.FC = () => {
+  const isMobile = useIsMobile();
+  
   return (
-    <section className="pt-24 pb-16">
+    <section className="pt-16 md:pt-24 pb-8 md:pb-16">
       <Container maxWidth="xl" className="relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="text-center md:text-left">
             <AnimateInView animation="fade-up" delay={200}>
               <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
@@ -22,6 +25,19 @@ const Hero: React.FC = () => {
                 Schedule grooming appointments, find local services, and keep your pets looking their best.
               </p>
             </AnimateInView>
+            
+            {isMobile && (
+              <AnimateInView animation="fade-in" delay={250} className="mb-6">
+                <div className="relative mx-auto w-[180px] h-[180px] rounded-full overflow-hidden border-4 border-pet-primary/30">
+                  <img 
+                    src="https://images.unsplash.com/photo-1535268647677-300dbf3d78d1" 
+                    alt="Cute pet" 
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </AnimateInView>
+            )}
             
             <AnimateInView animation="fade-up" delay={400}>
               <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
@@ -49,7 +65,7 @@ const Hero: React.FC = () => {
           </div>
           
           <AnimateInView animation="fade-in" delay={300} className="hidden md:block">
-            <div className="relative flex justify-center mt-12">
+            <div className="relative flex justify-center mt-16">
               <div className="relative w-[240px] h-[480px] rounded-[30px] border-8 border-black bg-black shadow-app-preview overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1000&auto=format" 

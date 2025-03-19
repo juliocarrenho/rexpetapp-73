@@ -34,7 +34,7 @@ const LeadCapture: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="relative">
+    <form onSubmit={handleSubmit} className="relative max-w-md mx-auto md:mx-0">
       <div className="flex items-center">
         <div className="relative flex-1">
           <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50" size={16} />
