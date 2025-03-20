@@ -13,8 +13,8 @@ const LeadCapture: React.FC = () => {
     
     if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       toast({
-        title: "Invalid email",
-        description: "Please enter a valid email address",
+        title: "Email inválido",
+        description: "Por favor, insira um endereço de email válido",
         variant: "destructive"
       });
       return;
@@ -27,8 +27,8 @@ const LeadCapture: React.FC = () => {
       setLoading(false);
       setEmail('');
       toast({
-        title: "Success!",
-        description: "Thank you for your interest. We'll be in touch soon!",
+        title: "Sucesso!",
+        description: "Obrigado pelo seu interesse. Entraremos em contato em breve!",
       });
     }, 1000);
   };
@@ -40,7 +40,7 @@ const LeadCapture: React.FC = () => {
           <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50" size={16} />
           <input
             type="email"
-            placeholder="Your email address"
+            placeholder="Seu endereço de email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full bg-white/10 border border-white/20 rounded-l-lg py-2.5 pl-10 pr-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-pet-primary focus:border-pet-primary transition-all duration-300"
@@ -57,12 +57,12 @@ const LeadCapture: React.FC = () => {
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
           ) : (
-            "Join"
+            "Inscrever"
           )}
         </button>
       </div>
       <p className="text-xs text-white/60 mt-2">
-        We'll never share your information with third parties.
+        Nós nunca compartilharemos suas informações com terceiros.
       </p>
     </form>
   );

@@ -24,18 +24,18 @@ const Features: React.FC = () => {
   const features = [
     {
       icon: <Calendar size={22} />,
-      title: "Easy Booking",
-      description: "Schedule grooming appointments with just a few taps."
+      title: "Agendamento Fácil",
+      description: "Agende serviços de banho e tosa com apenas alguns toques."
     },
     {
       icon: <Search size={22} />,
-      title: "Find Services",
-      description: "Discover top-rated pet groomers in your neighborhood."
+      title: "Encontre Serviços",
+      description: "Descubra petshops bem avaliados na sua vizinhança."
     },
     {
       icon: <Heart size={22} />,
-      title: "Pet Profiles",
-      description: "Keep track of your pet's preferences and history."
+      title: "Perfis de Pets",
+      description: "Acompanhe as preferências e histórico do seu pet."
     }
   ];
 
@@ -44,7 +44,7 @@ const Features: React.FC = () => {
       <Container maxWidth="xl">
         <AnimateInView animation="fade-up">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-            Keep Your Pets <span className="text-gradient">Happy & Clean</span>
+            Mantenha Seus Pets <span className="text-gradient">Felizes & Limpos</span>
           </h2>
         </AnimateInView>
 

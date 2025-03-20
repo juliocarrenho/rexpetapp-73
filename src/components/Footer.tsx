@@ -12,15 +12,15 @@ const Footer: React.FC = () => {
           <div>
             <img 
               src="/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
-              alt="Rex Pet Logo" 
+              alt="Logo Rex Pet" 
               className="h-7"
             />
           </div>
           
           <div className="flex space-x-4">
-            <a href="#" className="text-white/60 hover:text-pet-primary transition-colors text-xs">Privacy</a>
-            <a href="#" className="text-white/60 hover:text-pet-primary transition-colors text-xs">Terms</a>
-            <a href="#" className="text-white/60 hover:text-pet-primary transition-colors text-xs">Contact</a>
+            <a href="#" className="text-white/60 hover:text-pet-primary transition-colors text-xs">Privacidade</a>
+            <a href="#" className="text-white/60 hover:text-pet-primary transition-colors text-xs">Termos</a>
+            <a href="#" className="text-white/60 hover:text-pet-primary transition-colors text-xs">Contato</a>
           </div>
           
           <p className="text-white/50 text-xs">

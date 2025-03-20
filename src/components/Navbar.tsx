@@ -10,9 +10,9 @@ const Navbar: React.FC = () => {
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   const navLinks = [
-    { name: 'Features', href: '#features' },
+    { name: 'Recursos', href: '#features' },
     { name: 'Download', href: '#download' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contato', href: '#contact' },
   ];
 
   return (
@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
           <a href="#" className="flex items-center">
             <img 
               src="/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
-              alt="Rex Pet Logo" 
+              alt="Logo Rex Pet" 
               className="h-10"
             />
           </a>
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
           <button
             className="md:hidden text-white focus:outline-none"
             onClick={toggleMobileMenu}
-            aria-label="Toggle mobile menu"
+            aria-label="Alternar menu mobile"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
