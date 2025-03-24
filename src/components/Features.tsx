@@ -41,7 +41,7 @@ const Features: React.FC = () => {
             </h2>
           </AnimateInView>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-[100px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-[50px]">
             {features.map((feature, index) => <FeatureItem key={index} icon={feature.icon} title={feature.title} description={feature.description} />)}
           </div>
         </div>
