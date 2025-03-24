@@ -7,7 +7,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const Hero: React.FC = () => {
   const isMobile = useIsMobile();
   return <section className="min-h-[90vh] w-full pt-16 md:pt-24 pb-8 md:pb-16 flex items-center">
-      <Container maxWidth="full" className="relative z-10 px-[48px]">
+      <Container maxWidth="full" className="relative z-10 px-[58px]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 items-center max-w-6xl mx-auto">
           <div className="text-center md:text-left">
             <AnimateInView animation="fade-up" delay={200}>
