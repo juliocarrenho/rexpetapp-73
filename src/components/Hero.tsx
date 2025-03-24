@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
     <section className="min-h-[90vh] w-full pt-16 md:pt-24 pb-8 md:pb-16 flex items-center">
       <Container maxWidth="full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 items-center max-w-6xl mx-auto">
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left md:pl-4">
             <AnimateInView animation="fade-up" delay={200}>
               <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
                 <span className="text-gradient">Cuidados para Pets</span> de Forma Simples
