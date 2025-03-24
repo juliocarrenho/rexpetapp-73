@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
           </div>
           
           <AnimateInView animation="fade-in" delay={300} className="hidden md:block">
-            <div className="relative flex justify-end mt-16">
+            <div className="relative flex justify-end items-center h-full">
               <div className="relative w-[240px] h-[480px] rounded-[30px] border-8 border-black bg-black shadow-app-preview overflow-hidden mr-16">
                 <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1000&auto=format" alt="App de cuidados para pets" className="absolute inset-0 w-full h-full object-cover object-center rounded-[22px]" loading="lazy" />
               </div>
