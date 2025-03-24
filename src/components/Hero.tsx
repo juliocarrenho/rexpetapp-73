@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
   return (
     <section className="min-h-[90vh] w-full pt-16 md:pt-24 pb-8 md:pb-16 flex items-center">
       <Container maxWidth="full" className="relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-6 items-center max-w-6xl mx-auto">
           <div className="text-center md:text-left">
             <AnimateInView animation="fade-up" delay={200}>
               <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
@@ -74,7 +74,7 @@ const Hero: React.FC = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute -right-8 bottom-16 w-[140px] h-[140px] rounded-2xl border-4 border-black bg-black shadow-lg overflow-hidden">
+              <div className="absolute -right-4 bottom-20 w-[140px] h-[140px] rounded-2xl border-4 border-black bg-black shadow-lg overflow-hidden">
                 <img 
                   src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?q=80&w=800&auto=format" 
                   alt="Banho de cachorro" 
