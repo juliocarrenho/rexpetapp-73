@@ -80,36 +80,38 @@ const Testimonials: React.FC = () => {
         <div className="absolute bottom-[10%] left-[10%] w-72 h-72 rounded-full bg-pet-accent blur-3xl"></div>
       </div>
       
-      <Container maxWidth="2xl" className="relative z-10">
-        <AnimateInView animation="fade-up">
-          <h2 className="section-title text-center">What Pet Owners Say</h2>
-          <p className="section-subtitle text-center">
-            Join thousands of happy customers who have simplified their pet grooming routine
-          </p>
-        </AnimateInView>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={index}
-              content={testimonial.content}
-              author={testimonial.author}
-              role={testimonial.role}
-              rating={testimonial.rating}
-              image={testimonial.image}
-              delay={testimonial.delay}
-            />
-          ))}
-        </div>
-        
-        <AnimateInView animation="fade-up" delay={400} className="mt-16 text-center">
-          <div className="glass-panel inline-block px-6 py-4 mx-auto">
-            <p className="text-lg text-white/90 font-medium">
-              <span className="text-pet-primary text-2xl font-bold mr-2">4.9</span> 
-              Average Rating from <span className="text-white font-semibold">10,000+</span> Users
+      <Container maxWidth="full" className="relative z-10">
+        <div className="max-w-6xl mx-auto px-4">
+          <AnimateInView animation="fade-up">
+            <h2 className="section-title text-center">What Pet Owners Say</h2>
+            <p className="section-subtitle text-center">
+              Join thousands of happy customers who have simplified their pet grooming routine
             </p>
+          </AnimateInView>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <TestimonialCard
+                key={index}
+                content={testimonial.content}
+                author={testimonial.author}
+                role={testimonial.role}
+                rating={testimonial.rating}
+                image={testimonial.image}
+                delay={testimonial.delay}
+              />
+            ))}
           </div>
-        </AnimateInView>
+          
+          <AnimateInView animation="fade-up" delay={400} className="mt-16 text-center">
+            <div className="glass-panel inline-block px-6 py-4 mx-auto">
+              <p className="text-lg text-white/90 font-medium">
+                <span className="text-pet-primary text-2xl font-bold mr-2">4.9</span> 
+                Average Rating from <span className="text-white font-semibold">10,000+</span> Users
+              </p>
+            </div>
+          </AnimateInView>
+        </div>
       </Container>
     </section>
   );
