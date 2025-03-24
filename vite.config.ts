@@ -24,5 +24,10 @@ export default defineConfig(({ mode }) => ({
     outDir: "dist",
     sourcemap: true,
     minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: false,
+      },
+    }
   }
 }));

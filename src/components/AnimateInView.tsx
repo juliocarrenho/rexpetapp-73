@@ -2,29 +2,20 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 
-type AnimationVariant = 
-  | 'fade-in'
-  | 'fade-up' 
-  | 'scale-in'
-  | 'slide-in-right'
-  | 'none';
-
 interface AnimateInViewProps {
   children: React.ReactNode;
-  animation?: AnimationVariant;
+  animation?: 'fade-in' | 'fade-up' | 'slide-in-right' | 'scale-in';
   delay?: number;
-  className?: string;
   threshold?: number;
-  once?: boolean;
+  className?: string;
 }
 
 const AnimateInView: React.FC<AnimateInViewProps> = ({
   children,
-  animation = 'fade-up',
+  animation = 'fade-in',
   delay = 0,
-  className = '',
   threshold = 0.1,
-  once = true,
+  className,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -34,57 +25,35 @@ const AnimateInView: React.FC<AnimateInViewProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          if (once && ref.current) {
-            observer.unobserve(ref.current);
-          }
-        } else if (!once) {
-          setIsVisible(false);
+          observer.disconnect();
         }
       },
-      {
-        threshold,
-        rootMargin: '0px 0px -100px 0px'
-      }
+      { threshold }
     );
 
-    const currentRef = ref.current;
-    if (currentRef) {
-      observer.observe(currentRef);
+    if (ref.current) {
+      observer.observe(ref.current);
     }
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef);
-      }
+      observer.disconnect();
     };
-  }, [threshold, once]);
+  }, [threshold]);
 
-  const animationMap: Record<AnimationVariant, string> = {
-    'fade-in': 'animate-fade-in',
-    'fade-up': 'animate-fade-up',
-    'scale-in': 'animate-scale-in',
-    'slide-in-right': 'animate-slide-in-right',
-    'none': '',
+  const getAnimationClass = () => {
+    return isVisible ? `animate-${animation}` : 'opacity-0';
   };
 
-  const animationClass = animationMap[animation];
-  const animationDelay = delay ? `delay-[${delay}ms]` : '';
-  
+  // Handle delay properly to avoid TailwindCSS warnings
+  const getDelayStyle = () => {
+    return delay > 0 ? { animationDelay: `${delay}ms` } : {};
+  };
+
   return (
     <div
       ref={ref}
-      className={cn(
-        isVisible ? animationClass : 'opacity-0',
-        isVisible ? 'opacity-100' : 'opacity-0', // Ensure opacity is 100% when visible
-        animationDelay,
-        className
-      )}
-      style={{
-        animationPlayState: isVisible ? 'running' : 'paused',
-        animationDelay: `${delay}ms`,
-        // Make sure elements stay visible after animation completes
-        animationFillMode: 'forwards'
-      }}
+      className={cn(getAnimationClass(), className)}
+      style={getDelayStyle()}
     >
       {children}
     </div>
