@@ -40,15 +40,15 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section id="features" className="py-8">
-      <Container maxWidth="xl">
+    <section id="features" className="py-8 w-full">
+      <Container maxWidth="full">
         <AnimateInView animation="fade-up">
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
             Mantenha Seus Pets <span className="text-gradient">Felizes & Limpos</span>
           </h2>
         </AnimateInView>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
           {features.map((feature, index) => (
             <FeatureItem
               key={index}
