@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md">
-      <Container maxWidth="xl">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md w-full">
+      <Container maxWidth="full">
         <nav className="flex items-center justify-between py-3">
           <a href="#" className="flex items-center">
             <img 
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
         {/* Mobile Navigation */}
         <div 
           className={cn(
-            'md:hidden absolute left-0 right-0 top-full px-4 pt-2 pb-4 bg-black/80 backdrop-blur-lg transition-all duration-300 ease-in-out',
+            'md:hidden absolute left-0 right-0 top-full px-4 pt-2 pb-4 bg-black/80 backdrop-blur-lg transition-all duration-300 ease-in-out w-full',
             mobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
           )}
         >
