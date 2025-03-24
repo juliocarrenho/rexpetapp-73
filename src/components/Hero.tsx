@@ -10,8 +10,8 @@ const Hero: React.FC = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section className="min-h-[90vh] pt-16 md:pt-24 pb-8 md:pb-16 flex items-center">
-      <Container maxWidth="xl" className="relative z-10">
+    <section className="min-h-[90vh] w-full pt-16 md:pt-24 pb-8 md:pb-16 flex items-center">
+      <Container maxWidth="full" className="relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="text-center md:text-left">
             <AnimateInView animation="fade-up" delay={200}>
