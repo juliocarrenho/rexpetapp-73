@@ -10,7 +10,7 @@ const Hero: React.FC = () => {
   const isMobile = useIsMobile();
   
   return (
-    <section className="pt-16 md:pt-24 pb-8 md:pb-16">
+    <section className="min-h-[90vh] pt-16 md:pt-24 pb-8 md:pb-16 flex items-center">
       <Container maxWidth="xl" className="relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="text-center md:text-left">
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
                   <Apple size={22} className="mr-2" />
                   <div className="text-left">
                     <p className="text-xs font-light">Baixe na</p>
-                    <p className="text-sm font-semibold">App Store</p>
+                    <p className="text-sm font-bold">App Store</p>
                   </div>
                 </a>
                 
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
                   <Smartphone size={22} className="mr-2" />
                   <div className="text-left">
                     <p className="text-xs font-light">DISPONÍVEL NO</p>
-                    <p className="text-sm font-semibold">Google Play</p>
+                    <p className="text-sm font-bold">Google Play</p>
                   </div>
                 </a>
               </div>
