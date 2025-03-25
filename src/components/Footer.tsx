@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Container from './ui/container';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -10,11 +11,13 @@ const Footer: React.FC = () => {
       <Container maxWidth="full">
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 max-w-6xl mx-auto px-4">
           <div>
-            <img 
-              src="/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
-              alt="Logo Rex Pet" 
-              className="h-7"
-            />
+            <Link to="/">
+              <img 
+                src="/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
+                alt="Logo Rex Pet" 
+                className="h-7"
+              />
+            </Link>
           </div>
           
           <div className="flex space-x-4">

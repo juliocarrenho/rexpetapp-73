@@ -27,7 +27,10 @@ const AppPreview: React.FC = () => {
                 className="relative w-[180px] md:w-[220px] h-[380px] md:h-[460px] rounded-[36px] border-8 border-black bg-black shadow-app-preview overflow-hidden transform rotate-[-8deg]"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1607923667638-73996d3d7bcf?q=80&w=1000&auto=format" 
+                  src="/rexpetapp/lovable-uploads/app-screen-1.jpg" 
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1607923667638-73996d3d7bcf?q=80&w=1000&auto=format";
+                  }}
                   alt="App screenshot: Home screen" 
                   className="absolute inset-0 w-full h-full object-cover rounded-[24px]"
                   loading="lazy"
@@ -40,7 +43,10 @@ const AppPreview: React.FC = () => {
                 className="relative w-[200px] md:w-[240px] h-[420px] md:h-[500px] rounded-[36px] border-8 border-black bg-black shadow-app-preview overflow-hidden z-10"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1553691158-78c6c41cb8b9?q=80&w=1000&auto=format" 
+                  src="/rexpetapp/lovable-uploads/app-screen-2.jpg"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1553691158-78c6c41cb8b9?q=80&w=1000&auto=format";
+                  }} 
                   alt="App screenshot: Booking screen" 
                   className="absolute inset-0 w-full h-full object-cover rounded-[24px]"
                   loading="lazy"
@@ -54,7 +60,10 @@ const AppPreview: React.FC = () => {
                 className="relative w-[180px] md:w-[220px] h-[380px] md:h-[460px] rounded-[36px] border-8 border-black bg-black shadow-app-preview overflow-hidden transform rotate-[8deg]"
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1633293321141-c415f5ff5586?q=80&w=1000&auto=format" 
+                  src="/rexpetapp/lovable-uploads/app-screen-3.jpg"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1633293321141-c415f5ff5586?q=80&w=1000&auto=format";
+                  }} 
                   alt="App screenshot: Profile screen" 
                   className="absolute inset-0 w-full h-full object-cover rounded-[24px]"
                   loading="lazy"
