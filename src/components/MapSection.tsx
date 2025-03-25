@@ -30,29 +30,33 @@ const MapSection: React.FC = () => {
 
         <AnimateInView animation="fade-up" delay={200}>
           <div className="rounded-xl overflow-hidden shadow-app-preview glass-panel relative">
-            <div className="h-[400px] md:h-[500px] bg-pet-dark/30 relative" style={{
-              backgroundImage: "url('/map-background.jpg')",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}>
+            <div className="h-[400px] md:h-[500px] relative">
+              {/* Map background image */}
+              <div className="absolute inset-0 bg-gray-800">
+                <img 
+                  src="/map-background.jpg" 
+                  alt="Map background" 
+                  className="w-full h-full object-cover opacity-70"
+                />
+              </div>
+              
               {/* Overlay to darken the map image */}
               <div className="absolute inset-0 bg-black/40"></div>
               
               {/* City outline overlay */}
-              <div className="absolute inset-0 opacity-60"
-                style={{
-                  backgroundImage: "url('/city-outline.png')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundBlendMode: "screen",
-                }}>
+              <div className="absolute inset-0 opacity-60">
+                <img 
+                  src="/city-outline.png" 
+                  alt="City outline" 
+                  className="w-full h-full object-cover mix-blend-screen"
+                />
               </div>
               
               {/* Map pins */}
               {PETSHOPS.map((shop, index) => (
                 <div 
                   key={index}
-                  className="absolute animate-pulse-soft transition-all duration-300 hover:scale-110 cursor-pointer"
+                  className="absolute animate-pulse-soft transition-all duration-300 hover:scale-110 cursor-pointer group z-10"
                   style={{ 
                     left: shop.position.left, 
                     top: shop.position.top,
@@ -73,7 +77,7 @@ const MapSection: React.FC = () => {
               ))}
               
               {/* Legend */}
-              <div className="absolute bottom-4 right-4 bg-black/70 p-3 rounded-lg">
+              <div className="absolute bottom-4 right-4 bg-black/70 p-3 rounded-lg z-10">
                 <div className="flex items-center gap-2">
                   <MapPin size={16} className="text-pet-primary" />
                   <span className="text-white text-sm">PetShops Parceiros</span>
