@@ -30,5 +30,5 @@ export default defineConfig(({ mode }) => ({
       },
     }
   },
-  base: '/rexpetapp/' // Setting correct base path for the app
+  base: '/' // Updated to use root path for the new domain
 }));

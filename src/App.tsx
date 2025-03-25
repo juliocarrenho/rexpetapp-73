@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 
 console.log("App component rendering with explicit routes");
+console.log("Using new domain configuration for routing");
 
 const queryClient = new QueryClient();
 
@@ -19,7 +20,7 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename="/rexpetapp">
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="*" element={<NotFound />} />

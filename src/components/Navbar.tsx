@@ -16,8 +16,8 @@ const Navbar: React.FC = () => {
     { name: 'Contato', href: '#contact' },
   ];
 
-  // Use absolute URL for the logo
-  const logoUrl = `${window.location.origin}/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png`;
+  // Use relative path for the logo
+  const logoUrl = "/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png";
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md w-full">
@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
                 console.error("Logo failed to load:", e);
                 const target = e.target as HTMLImageElement;
                 target.onerror = null;
-                target.src = "/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png";
+                target.src = "/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png";
               }}
             />
           </Link>

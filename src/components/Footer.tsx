@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
-  // Use absolute URL for the logo
-  const logoUrl = `${window.location.origin}/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png`;
+  // Use relative URL for the logo
+  const logoUrl = "/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png";
   
   return (
     <footer className="bg-black py-4 relative w-full">
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
                   console.error("Footer logo failed to load:", e);
                   const target = e.target as HTMLImageElement;
                   target.onerror = null;
-                  target.src = "/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png";
+                  target.src = "/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png";
                 }}
               />
             </Link>
