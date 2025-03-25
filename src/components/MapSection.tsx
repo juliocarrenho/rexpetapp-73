@@ -1,85 +1,19 @@
 
-import React, { useEffect, useRef, useState } from 'react';
-import mapboxgl from 'mapbox-gl';
-import 'mapbox-gl/dist/mapbox-gl.css';
+import React from 'react';
 import Container from './ui/container';
 import AnimateInView from './AnimateInView';
+import { MapPin } from 'lucide-react';
 
-// Sample petshop locations - replace with real data as needed
+// Sample petshop locations - these will be displayed statically
 const PETSHOPS = [
-  { name: "PetLove Centro", coordinates: [-46.6333, -23.5505], rating: 4.8 },
-  { name: "Animal Care", coordinates: [-46.6633, -23.5605], rating: 4.6 },
-  { name: "Pet Feliz", coordinates: [-46.6433, -23.5705], rating: 4.7 },
-  { name: "Mundo Animal", coordinates: [-46.6533, -23.5305], rating: 4.5 },
-  { name: "PetShop Express", coordinates: [-46.6733, -23.5805], rating: 4.9 },
+  { name: "PetLove Centro", position: { left: "40%", top: "35%" }, rating: 4.8 },
+  { name: "Animal Care", position: { left: "65%", top: "45%" }, rating: 4.6 },
+  { name: "Pet Feliz", position: { left: "55%", top: "60%" }, rating: 4.7 },
+  { name: "Mundo Animal", position: { left: "30%", top: "50%" }, rating: 4.5 },
+  { name: "PetShop Express", position: { left: "75%", top: "30%" }, rating: 4.9 },
 ];
 
 const MapSection: React.FC = () => {
-  const mapContainer = useRef<HTMLDivElement>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
-  const [mapboxToken, setMapboxToken] = useState<string>('');
-
-  // This would be where you'd use a real Mapbox token
-  // For now we'll use a placeholder input field for the user to add their own token
-  useEffect(() => {
-    if (!mapContainer.current || !mapboxToken) return;
-
-    // Initialize map
-    mapboxgl.accessToken = mapboxToken;
-    
-    try {
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-46.6333, -23.5505], // São Paulo coordinates (approximate)
-        zoom: 12,
-      });
-
-      // Add navigation controls
-      map.current.addControl(
-        new mapboxgl.NavigationControl(),
-        'top-right'
-      );
-
-      // Add markers for each petshop
-      PETSHOPS.forEach(shop => {
-        // Create a marker element
-        const el = document.createElement('div');
-        el.className = 'petshop-marker';
-        el.style.width = '25px';
-        el.style.height = '25px';
-        el.style.borderRadius = '50%';
-        el.style.backgroundColor = '#0080a6';
-        el.style.border = '3px solid white';
-        el.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
-        el.style.cursor = 'pointer';
-        
-        // Create a popup
-        const popup = new mapboxgl.Popup({ offset: 25 })
-          .setHTML(`
-            <div style="padding: 8px;">
-              <h3 style="font-weight: bold; margin-bottom: 5px;">${shop.name}</h3>
-              <p style="margin: 0;">Avaliação: ${shop.rating}/5</p>
-            </div>
-          `);
-
-        // Add marker to the map
-        new mapboxgl.Marker(el)
-          .setLngLat(shop.coordinates)
-          .setPopup(popup)
-          .addTo(map.current!);
-      });
-
-    } catch (error) {
-      console.error("Error initializing map:", error);
-    }
-
-    // Cleanup
-    return () => {
-      map.current?.remove();
-    };
-  }, [mapboxToken]);
-
   return (
     <section id="map" className="py-16 md:py-24 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-pet-gradient opacity-30"></div>
@@ -95,31 +29,57 @@ const MapSection: React.FC = () => {
         </AnimateInView>
 
         <AnimateInView animation="fade-up" delay={200}>
-          {!mapboxToken && (
-            <div className="mb-6 p-4 bg-pet-primary/10 rounded-lg border border-pet-primary/30 max-w-xl mx-auto">
-              <p className="text-white mb-2">
-                Para visualizar o mapa, insira seu token público do Mapbox:
-              </p>
-              <input
-                type="text"
-                placeholder="Insira seu token do Mapbox"
-                className="w-full p-2 rounded bg-black/40 border border-pet-primary/20 text-white"
-                onChange={(e) => setMapboxToken(e.target.value)}
-              />
-              <p className="text-white/60 text-xs mt-2">
-                Você pode obter um token gratuito em <a href="https://www.mapbox.com/" target="_blank" rel="noopener noreferrer" className="text-pet-primary hover:underline">mapbox.com</a>
-              </p>
-            </div>
-          )}
-          
           <div className="rounded-xl overflow-hidden shadow-app-preview glass-panel relative">
-            {!mapboxToken ? (
-              <div className="h-[400px] md:h-[500px] bg-pet-dark/30 flex items-center justify-center">
-                <p className="text-white/70">Insira seu token do Mapbox para visualizar o mapa</p>
+            <div className="h-[400px] md:h-[500px] bg-pet-dark/30 relative" style={{
+              backgroundImage: "url('/map-background.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}>
+              {/* Overlay to darken the map image */}
+              <div className="absolute inset-0 bg-black/40"></div>
+              
+              {/* City outline overlay */}
+              <div className="absolute inset-0 opacity-60"
+                style={{
+                  backgroundImage: "url('/city-outline.png')",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  backgroundBlendMode: "screen",
+                }}>
               </div>
-            ) : (
-              <div className="h-[400px] md:h-[500px]" ref={mapContainer}></div>
-            )}
+              
+              {/* Map pins */}
+              {PETSHOPS.map((shop, index) => (
+                <div 
+                  key={index}
+                  className="absolute animate-pulse-soft transition-all duration-300 hover:scale-110 cursor-pointer"
+                  style={{ 
+                    left: shop.position.left, 
+                    top: shop.position.top,
+                  }}
+                >
+                  <div className="relative">
+                    <MapPin size={32} className="text-pet-primary drop-shadow-lg" fill="#001a22" />
+                    
+                    {/* Popup on hover */}
+                    <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-200">
+                      <div className="bg-white text-black p-2 rounded-lg shadow-lg text-sm whitespace-nowrap">
+                        <p className="font-bold">{shop.name}</p>
+                        <p className="text-xs">Avaliação: {shop.rating}/5</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              
+              {/* Legend */}
+              <div className="absolute bottom-4 right-4 bg-black/70 p-3 rounded-lg">
+                <div className="flex items-center gap-2">
+                  <MapPin size={16} className="text-pet-primary" />
+                  <span className="text-white text-sm">PetShops Parceiros</span>
+                </div>
+              </div>
+            </div>
           </div>
         </AnimateInView>
       </Container>
