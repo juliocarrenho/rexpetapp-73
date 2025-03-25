@@ -29,5 +29,6 @@ export default defineConfig(({ mode }) => ({
         drop_console: false,
       },
     }
-  }
+  },
+  base: '/' // Ensuring base path is set correctly
 }));

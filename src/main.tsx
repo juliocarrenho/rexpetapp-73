@@ -12,4 +12,7 @@ rootElement.style.width = '100%';
 rootElement.style.maxWidth = 'none';
 rootElement.style.padding = '0';
 
+// Explicitly clean up any existing rendering before creating a new one
 createRoot(rootElement).render(<App />);
+
+console.log("Application mounted successfully");
