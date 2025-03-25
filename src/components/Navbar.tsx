@@ -16,15 +16,24 @@ const Navbar: React.FC = () => {
     { name: 'Contato', href: '#contact' },
   ];
 
+  // Use absolute URL for the logo
+  const logoUrl = `${window.location.origin}/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png`;
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md w-full">
       <Container maxWidth="full">
         <nav className="flex items-center justify-between py-3 max-w-6xl mx-auto px-4">
           <Link to="/" className="flex items-center">
             <img 
-              src="/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
+              src={logoUrl}
               alt="Logo Rex Pet" 
               className="h-10"
+              onError={(e) => {
+                console.error("Logo failed to load:", e);
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.src = "/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png";
+              }}
             />
           </Link>
 
