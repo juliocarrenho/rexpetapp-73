@@ -30,5 +30,5 @@ export default defineConfig(({ mode }) => ({
       },
     }
   },
-  base: '/' // Ensuring base path is set correctly
+  base: '/rexpetapp/' // Setting correct base path for the app
 }));

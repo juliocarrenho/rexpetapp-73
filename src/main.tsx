@@ -15,4 +15,4 @@ rootElement.style.padding = '0';
 // Explicitly clean up any existing rendering before creating a new one
 createRoot(rootElement).render(<App />);
 
-console.log("Application mounted successfully");
+console.log("Application mounted successfully with basename: /rexpetapp/");
