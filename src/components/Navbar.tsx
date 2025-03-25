@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
         <nav className="flex items-center justify-between py-3 max-w-6xl mx-auto px-4">
           <a href="#" className="flex items-center">
             <img 
-              src="/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
+              src="./lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
               alt="Logo Rex Pet" 
               className="h-10"
             />
