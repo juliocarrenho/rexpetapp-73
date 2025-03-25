@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-3 max-w-6xl mx-auto px-4">
           <div>
             <img 
-              src="./lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
+              src="/rexpetapp/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png" 
               alt="Logo Rex Pet" 
               className="h-7"
             />
