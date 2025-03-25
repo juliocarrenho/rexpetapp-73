@@ -6,6 +6,8 @@ import './index.css'
 // Add more debugging information
 console.log("Starting application with base path:", document.baseURI);
 console.log("Current location:", window.location.href);
+console.log("Window origin:", window.location.origin);
+console.log("Pathname:", window.location.pathname);
 
 // Make sure we have a DOM element to render to
 const rootElement = document.getElementById("root");

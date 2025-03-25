@@ -7,7 +7,9 @@ import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
   useEffect(() => {
-    console.log("Index component mounted");
+    console.log("Index component mounted successfully");
+    // Log window location for debugging
+    console.log("Window location in Index:", window.location.href);
   }, []);
 
   return (
