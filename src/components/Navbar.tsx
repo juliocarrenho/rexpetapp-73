@@ -37,13 +37,13 @@ const Navbar: React.FC = () => {
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Updated to white and bold font */}
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white/80 hover:text-white transition-colors duration-300 text-sm font-medium"
+                className="text-white hover:text-white transition-colors duration-300 text-sm font-bold"
               >
                 {link.name}
               </a>
@@ -60,7 +60,7 @@ const Navbar: React.FC = () => {
           </button>
         </nav>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Updated to white and bold font */}
         <div 
           className={cn(
             'md:hidden absolute left-0 right-0 top-full px-4 pt-2 pb-4 bg-black/80 backdrop-blur-lg transition-all duration-300 ease-in-out w-full',
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-white/80 hover:text-white transition-colors duration-300 py-1 text-sm"
+                className="text-white hover:text-white transition-colors duration-300 py-1 text-sm font-bold"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
