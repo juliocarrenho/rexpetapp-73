@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Container from './ui/container';
 import AnimateInView from './AnimateInView';
@@ -41,6 +40,7 @@ const PETSHOPS = [{
   },
   rating: 4.9
 }];
+
 const MapSection: React.FC = () => {
   return <section id="map" className="py-16 md:py-24 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-pet-gradient opacity-30"></div>
@@ -58,22 +58,18 @@ const MapSection: React.FC = () => {
         <AnimateInView animation="fade-up" delay={200}>
           <div className="rounded-xl overflow-hidden shadow-app-preview glass-panel relative">
             <div className="h-[400px] md:h-[500px] relative">
-              {/* Map background image */}
+              {/* Map background image - updated to use the new uploaded image */}
               <div className="absolute inset-0 bg-gray-800">
-                <img src="/map-background.jpg" alt="Map background" className="w-full h-full object-cover opacity-70" />
-              </div>
-              
-              {/* Overlay to darken the map image */}
-              <div className="absolute inset-0 bg-black/40"></div>
-              
-              {/* City outline overlay - removed mix-blend-screen to eliminate shadow effect */}
-              <div className="absolute inset-0 opacity-60">
                 <img 
-                  alt="City outline" 
-                  className="w-full h-full object-cover" 
-                  src="/lovable-uploads/90474696-0429-404a-95cb-14df0cc1c698.png" 
+                  src="/lovable-uploads/bb894b99-5366-43cd-a071-05bd3b1266bc.png" 
+                  alt="Map background" 
+                  className="w-full h-full object-cover opacity-90" 
                 />
               </div>
+              
+              {/* Removed the overlay to darken the map image since the new image is already dark */}
+              
+              {/* Removed the city outline overlay since the new image already has the road network */}
               
               {/* Map pins */}
               {PETSHOPS.map((shop, index) => <div key={index} className="absolute animate-pulse-soft transition-all duration-300 hover:scale-110 cursor-pointer group z-10" style={{
