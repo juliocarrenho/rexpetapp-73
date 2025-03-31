@@ -88,7 +88,7 @@ const ServicesSection: React.FC = () => {
   ];
 
   return (
-    <section id="services" className="py-16 md:py-24 w-full bg-pet-primary/90 relative overflow-hidden">
+    <section id="services" className="py-16 md:py-24 w-full bg-pet-secondary relative overflow-hidden">
       <div className="absolute inset-0 bg-pet-gradient opacity-20"></div>
       
       <div className="w-full mb-12">
