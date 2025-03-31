@@ -114,11 +114,15 @@ const ServicesSection: React.FC = () => {
               imageSrc={service.imageSrc}
               isEven={index % 2 === 0}
             />
+            {index < services.length - 1 && (
+              <Separator className="w-full h-[1px] bg-white/10" />
+            )}
           </React.Fragment>
         ))}
       </div>
       
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-pet-secondary via-black/90 to-black z-10"></div>
+      {/* Fading transition to blend with the MapSection */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black z-10"></div>
     </section>
   );
 };
