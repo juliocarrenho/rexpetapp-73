@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Container from './ui/container';
 import AnimateInView from './AnimateInView';
@@ -43,9 +44,12 @@ const PETSHOPS = [{
 
 const MapSection: React.FC = () => {
   return <section id="map" className="py-16 md:py-24 bg-black relative overflow-hidden">
+      {/* Fading transition from ServicesSection */}
+      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-pet-secondary z-10"></div>
+      
       <div className="absolute inset-0 bg-pet-gradient opacity-30"></div>
       
-      <Container maxWidth="2xl">
+      <Container maxWidth="2xl" className="relative z-20">
         <AnimateInView animation="fade-up">
           <h2 className="text-gradient text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8">
             Encontre PetShops Próximos

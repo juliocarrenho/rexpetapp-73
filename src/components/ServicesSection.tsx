@@ -120,6 +120,9 @@ const ServicesSection: React.FC = () => {
           </React.Fragment>
         ))}
       </div>
+      
+      {/* Fading transition to blend with the MapSection */}
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black z-10"></div>
     </section>
   );
 };
