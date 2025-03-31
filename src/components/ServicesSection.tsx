@@ -53,37 +53,37 @@ const ServicesSection: React.FC = () => {
       icon: <Scissors size={20} />,
       title: "Tosa Profissional",
       description: "Cortes personalizados e estilização para deixar seu pet com visual renovado e saudável.",
-      imageSrc: "/lovable-uploads/90474696-0429-404a-95cb-14df0cc1c698.png"
+      imageSrc: "/lovable-uploads/343c60f1-e8c7-4e6c-9f7f-fb9db57dba86.png"
     },
     {
       icon: <ShowerHead size={20} />,
       title: "Banho Completo",
       description: "Limpeza completa com produtos específicos para cada tipo de pelagem e necessidade.",
-      imageSrc: "/lovable-uploads/19e6c2ea-108c-4df7-82f0-fc342f59a0ec.png"
+      imageSrc: "/lovable-uploads/cf16fe67-295f-4110-8486-e03556454822.png"
     },
     {
       icon: <Stethoscope size={20} />,
       title: "Atendimento Veterinário",
       description: "Consultas, exames e cuidados preventivos para manter a saúde do seu animal em dia.",
-      imageSrc: "/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png"
+      imageSrc: "/lovable-uploads/ae84501d-a21e-40bb-995e-b8bac8284c1d.png"
     },
     {
       icon: <ShoppingBag size={20} />,
       title: "Pet Shop",
       description: "Produtos de qualidade para alimentação, higiene, conforto e diversão do seu pet.",
-      imageSrc: "/lovable-uploads/bb894b99-5366-43cd-a071-05bd3b1266bc.png"
+      imageSrc: "/lovable-uploads/965b2b79-8bb1-40b7-aec6-c043356a22b8.png"
     },
     {
       icon: <Heart size={20} />,
       title: "Cuidados Especiais",
       description: "Tratamentos específicos para pets idosos ou com necessidades especiais.",
-      imageSrc: "/lovable-uploads/90474696-0429-404a-95cb-14df0cc1c698.png"
+      imageSrc: "/lovable-uploads/63a840e6-d0a1-461e-98cc-80636d38f2fe.png"
     },
     {
       icon: <PawPrint size={20} />,
       title: "Hotel Pet",
       description: "Hospedagem segura e confortável para seu pet durante suas viagens ou ausências.",
-      imageSrc: "/lovable-uploads/19e6c2ea-108c-4df7-82f0-fc342f59a0ec.png"
+      imageSrc: "/lovable-uploads/f024a96e-a06d-4139-9c53-2b7a1532eab5.png"
     }
   ];
 
