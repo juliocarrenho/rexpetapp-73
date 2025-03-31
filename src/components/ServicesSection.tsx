@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Scissors, ShowerHead, Heart, Stethoscope, ShoppingBag, PawPrint } from 'lucide-react';
 import Container from './ui/container';
@@ -121,8 +120,7 @@ const ServicesSection: React.FC = () => {
         ))}
       </div>
       
-      {/* Fading transition to blend with the MapSection */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-black z-10"></div>
+      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-pet-secondary via-black/90 to-black z-10"></div>
     </section>
   );
 };

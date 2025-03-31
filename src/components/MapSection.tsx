@@ -44,8 +44,8 @@ const PETSHOPS = [{
 
 const MapSection: React.FC = () => {
   return <section id="map" className="py-16 md:py-24 bg-black relative overflow-hidden">
-      {/* Fading transition from ServicesSection */}
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-pet-secondary z-10"></div>
+      {/* Improved fading transition from ServicesSection - starts with black and softly blends */}
+      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-t from-transparent via-black/90 to-black z-10"></div>
       
       <div className="absolute inset-0 bg-pet-gradient opacity-30"></div>
       
