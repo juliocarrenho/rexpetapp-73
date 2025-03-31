@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Scissors, ShowerHead, Heart, Stethoscope, ShoppingBag, PawPrint } from 'lucide-react';
 import Container from './ui/container';
@@ -113,9 +114,7 @@ const ServicesSection: React.FC = () => {
               imageSrc={service.imageSrc}
               isEven={index % 2 === 0}
             />
-            {index < services.length - 1 && (
-              <Separator className="w-full h-[1px] bg-white/10" />
-            )}
+            {/* Removed separator here */}
           </React.Fragment>
         ))}
       </div>
