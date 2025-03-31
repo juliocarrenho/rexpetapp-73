@@ -34,10 +34,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       />
     </div>
     <div 
-      className={`w-full md:w-1/2 bg-pet-primary/90 flex flex-col justify-center p-8 md:p-12 ${isEven ? 'md:order-1' : 'md:order-2'}`}
+      className={`w-full md:w-1/2 bg-pet-secondary flex flex-col justify-center p-8 md:p-12 ${isEven ? 'md:order-1' : 'md:order-2'}`}
     >
       <div className="flex items-center gap-4 mb-4">
-        <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white">
+        <div className="w-12 h-12 rounded-full bg-pet-primary flex items-center justify-center text-white">
           {icon}
         </div>
         <h3 className="text-3xl font-bold text-white">{title}</h3>
