@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Container from './ui/container';
 import AnimateInView from './AnimateInView';
@@ -65,9 +66,13 @@ const MapSection: React.FC = () => {
               {/* Overlay to darken the map image */}
               <div className="absolute inset-0 bg-black/40"></div>
               
-              {/* City outline overlay */}
+              {/* City outline overlay - removed mix-blend-screen to eliminate shadow effect */}
               <div className="absolute inset-0 opacity-60">
-                <img alt="City outline" className="w-full h-full object-cover mix-blend-screen" src="/lovable-uploads/90474696-0429-404a-95cb-14df0cc1c698.png" />
+                <img 
+                  alt="City outline" 
+                  className="w-full h-full object-cover" 
+                  src="/lovable-uploads/90474696-0429-404a-95cb-14df0cc1c698.png" 
+                />
               </div>
               
               {/* Map pins */}
