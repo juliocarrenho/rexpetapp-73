@@ -67,7 +67,7 @@ const MapSection: React.FC = () => {
               
               {/* City outline overlay */}
               <div className="absolute inset-0 opacity-60">
-                <img alt="City outline" className="w-full h-full object-cover mix-blend-screen" src="/lovable-uploads/19e6c2ea-108c-4df7-82f0-fc342f59a0ec.png" />
+                <img alt="City outline" className="w-full h-full object-cover mix-blend-screen" src="/lovable-uploads/90474696-0429-404a-95cb-14df0cc1c698.png" />
               </div>
               
               {/* Map pins */}
