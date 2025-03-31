@@ -114,7 +114,6 @@ const ServicesSection: React.FC = () => {
               imageSrc={service.imageSrc}
               isEven={index % 2 === 0}
             />
-            {/* Removed separator here */}
           </React.Fragment>
         ))}
       </div>
