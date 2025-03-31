@@ -1,21 +1,47 @@
-
 import React from 'react';
 import Container from './ui/container';
 import AnimateInView from './AnimateInView';
 import { MapPin } from 'lucide-react';
 
 // Sample petshop locations - these will be displayed statically
-const PETSHOPS = [
-  { name: "PetLove Centro", position: { left: "40%", top: "35%" }, rating: 4.8 },
-  { name: "Animal Care", position: { left: "65%", top: "45%" }, rating: 4.6 },
-  { name: "Pet Feliz", position: { left: "55%", top: "60%" }, rating: 4.7 },
-  { name: "Mundo Animal", position: { left: "30%", top: "50%" }, rating: 4.5 },
-  { name: "PetShop Express", position: { left: "75%", top: "30%" }, rating: 4.9 },
-];
-
+const PETSHOPS = [{
+  name: "PetLove Centro",
+  position: {
+    left: "40%",
+    top: "35%"
+  },
+  rating: 4.8
+}, {
+  name: "Animal Care",
+  position: {
+    left: "65%",
+    top: "45%"
+  },
+  rating: 4.6
+}, {
+  name: "Pet Feliz",
+  position: {
+    left: "55%",
+    top: "60%"
+  },
+  rating: 4.7
+}, {
+  name: "Mundo Animal",
+  position: {
+    left: "30%",
+    top: "50%"
+  },
+  rating: 4.5
+}, {
+  name: "PetShop Express",
+  position: {
+    left: "75%",
+    top: "30%"
+  },
+  rating: 4.9
+}];
 const MapSection: React.FC = () => {
-  return (
-    <section id="map" className="py-16 md:py-24 bg-black relative overflow-hidden">
+  return <section id="map" className="py-16 md:py-24 bg-black relative overflow-hidden">
       <div className="absolute inset-0 bg-pet-gradient opacity-30"></div>
       
       <Container maxWidth="2xl">
@@ -33,11 +59,7 @@ const MapSection: React.FC = () => {
             <div className="h-[400px] md:h-[500px] relative">
               {/* Map background image */}
               <div className="absolute inset-0 bg-gray-800">
-                <img 
-                  src="/map-background.jpg" 
-                  alt="Map background" 
-                  className="w-full h-full object-cover opacity-70"
-                />
+                <img src="/map-background.jpg" alt="Map background" className="w-full h-full object-cover opacity-70" />
               </div>
               
               {/* Overlay to darken the map image */}
@@ -45,23 +67,14 @@ const MapSection: React.FC = () => {
               
               {/* City outline overlay */}
               <div className="absolute inset-0 opacity-60">
-                <img 
-                  src="/city-outline.png" 
-                  alt="City outline" 
-                  className="w-full h-full object-cover mix-blend-screen"
-                />
+                <img alt="City outline" className="w-full h-full object-cover mix-blend-screen" src="/lovable-uploads/19e6c2ea-108c-4df7-82f0-fc342f59a0ec.png" />
               </div>
               
               {/* Map pins */}
-              {PETSHOPS.map((shop, index) => (
-                <div 
-                  key={index}
-                  className="absolute animate-pulse-soft transition-all duration-300 hover:scale-110 cursor-pointer group z-10"
-                  style={{ 
-                    left: shop.position.left, 
-                    top: shop.position.top,
-                  }}
-                >
+              {PETSHOPS.map((shop, index) => <div key={index} className="absolute animate-pulse-soft transition-all duration-300 hover:scale-110 cursor-pointer group z-10" style={{
+              left: shop.position.left,
+              top: shop.position.top
+            }}>
                   <div className="relative">
                     <MapPin size={32} className="text-pet-primary drop-shadow-lg" fill="#001a22" />
                     
@@ -73,8 +86,7 @@ const MapSection: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                </div>)}
               
               {/* Legend */}
               <div className="absolute bottom-4 right-4 bg-black/70 p-3 rounded-lg z-10">
@@ -87,8 +99,6 @@ const MapSection: React.FC = () => {
           </div>
         </AnimateInView>
       </Container>
-    </section>
-  );
+    </section>;
 };
-
 export default MapSection;
