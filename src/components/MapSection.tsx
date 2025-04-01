@@ -44,9 +44,6 @@ const PETSHOPS = [{
 
 const MapSection: React.FC = () => {
   return <section id="map" className="py-16 md:py-24 bg-black relative overflow-hidden">
-      {/* Fading transition from ServicesSection */}
-      <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-t from-transparent to-pet-secondary z-10"></div>
-      
       <div className="absolute inset-0 bg-pet-gradient opacity-30"></div>
       
       <Container maxWidth="2xl" className="relative z-20">
@@ -70,10 +67,6 @@ const MapSection: React.FC = () => {
                   className="w-full h-full object-cover opacity-90" 
                 />
               </div>
-              
-              {/* Removed the overlay to darken the map image since the new image is already dark */}
-              
-              {/* Removed the city outline overlay since the new image already has the road network */}
               
               {/* Map pins */}
               {PETSHOPS.map((shop, index) => <div key={index} className="absolute animate-pulse-soft transition-all duration-300 hover:scale-110 cursor-pointer group z-10" style={{
