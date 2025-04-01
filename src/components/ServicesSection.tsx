@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Scissors, ShowerHead, Heart, Stethoscope, ShoppingBag, PawPrint } from 'lucide-react';
 import Container from './ui/container';
 import AnimateInView from './AnimateInView';
-
 interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
@@ -11,7 +9,6 @@ interface ServiceCardProps {
   imageSrc: string;
   isEven: boolean;
 }
-
 const ServiceCard: React.FC<ServiceCardProps> = ({
   icon,
   title,
@@ -32,7 +29,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <p className="text-white/80 text-lg">{description}</p>
     </div>
   </AnimateInView>;
-
 const ServicesSection: React.FC = () => {
   const services = [{
     icon: <Scissors size={20} />,
@@ -65,7 +61,6 @@ const ServicesSection: React.FC = () => {
     description: "Hospedagem segura e confortável para seu pet durante suas viagens ou ausências.",
     imageSrc: "/lovable-uploads/f024a96e-a06d-4139-9c53-2b7a1532eab5.png"
   }];
-
   return <section id="services" className="py-16 w-full bg-pet-secondary relative overflow-hidden md:py-0">
       <Container maxWidth="2xl">
         <AnimateInView animation="fade-up">
@@ -84,8 +79,8 @@ const ServicesSection: React.FC = () => {
           </React.Fragment>)}
       </div>
       
+      {/* Add a smooth gradient transition to the next section */}
       <div className="w-full h-24 bg-gradient-to-b from-pet-secondary to-pet-dark"></div>
     </section>;
 };
-
 export default ServicesSection;

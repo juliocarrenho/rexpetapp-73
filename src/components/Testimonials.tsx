@@ -73,7 +73,7 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section id="testimonials" className="pt-40 pb-24 bg-pet-dark relative overflow-hidden">
+    <section id="testimonials" className="pt-0 pb-24 bg-pet-dark relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-[20%] right-[5%] w-64 h-64 rounded-full bg-pet-primary blur-3xl"></div>
