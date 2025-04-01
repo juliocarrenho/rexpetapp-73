@@ -32,7 +32,7 @@ const Features: React.FC = () => {
     title: "Perfis de Pets",
     description: "Acompanhe as preferências e histórico do seu pet."
   }];
-  return <section id="features" className="py-8 w-full">
+  return <section id="features" className="w-full py-0">
       <Container maxWidth="full">
         <div className="max-w-6xl mx-auto px-4">
           <AnimateInView animation="fade-up">
