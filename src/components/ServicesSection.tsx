@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Scissors, ShowerHead, Heart, Stethoscope, ShoppingBag, PawPrint } from 'lucide-react';
 import Container from './ui/container';
@@ -89,22 +88,18 @@ const ServicesSection: React.FC = () => {
 
   return (
     <section id="services" className="py-16 md:py-24 w-full bg-pet-secondary relative overflow-hidden">
-      <div className="absolute inset-0 bg-pet-gradient opacity-20"></div>
-      
-      <div className="w-full mb-12">
-        <Container maxWidth="2xl">
-          <AnimateInView animation="fade-up">
-            <h2 className="text-gradient text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2">
-              Serviços para seu Pet
-            </h2>
-            <p className="text-white/80 text-center max-w-3xl mx-auto">
-              Descubra todos os serviços de qualidade disponíveis para o bem-estar e cuidado do seu animal de estimação
-            </p>
-          </AnimateInView>
-        </Container>
-      </div>
+      <Container maxWidth="2xl">
+        <AnimateInView animation="fade-up">
+          <h2 className="text-gradient text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2">
+            Serviços para seu Pet
+          </h2>
+          <p className="text-white/80 text-center max-w-3xl mx-auto">
+            Descubra todos os serviços de qualidade disponíveis para o bem-estar e cuidado do seu animal de estimação
+          </p>
+        </AnimateInView>
+      </Container>
 
-      <div className="w-full">
+      <div className="w-full mt-12">
         {services.map((service, index) => (
           <React.Fragment key={index}>
             <ServiceCard
