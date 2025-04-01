@@ -5,7 +5,7 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import ServicesSection from '@/components/ServicesSection';
 import Testimonials from '@/components/Testimonials';
-import MapSection from '@/components/MapSection';
+import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
 const Index: React.FC = () => {
@@ -23,7 +23,7 @@ const Index: React.FC = () => {
         <Features />
         <ServicesSection />
         <Testimonials />
-        <MapSection />
+        <ContactSection />
       </main>
       <Footer />
     </div>
