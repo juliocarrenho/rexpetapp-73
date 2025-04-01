@@ -61,7 +61,7 @@ const ServicesSection: React.FC = () => {
     description: "Hospedagem segura e confortável para seu pet durante suas viagens ou ausências.",
     imageSrc: "/lovable-uploads/f024a96e-a06d-4139-9c53-2b7a1532eab5.png"
   }];
-  return <section id="services" className="py-16 w-full bg-pet-secondary relative overflow-hidden md:py-0">
+  return <section id="services" className="pt-[50px] w-full bg-pet-secondary relative overflow-hidden md:pt-[40px]">
       <Container maxWidth="2xl">
         <AnimateInView animation="fade-up">
           <h2 className="text-gradient text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2">
