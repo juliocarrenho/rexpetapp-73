@@ -48,26 +48,26 @@ const Testimonials: React.FC = () => {
   const testimonials = [
     {
       content: "Este aplicativo tornou muito mais fácil agendar consultas de higienização para meus dois cães. Os lembretes são ótimos, e adoro poder especificar exatamente quais serviços cada animal precisa.",
-      author: "Sarah Johnson",
+      author: "Mariana Silva",
       role: "Dona de Cães",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=300&auto=format",
+      image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=300&auto=format",
       delay: 100
     },
     {
       content: "Como alguém com uma agenda muito ocupada, este aplicativo tem sido um salvador. Poder marcar consultas e pagar através do aplicativo me economiza muito tempo.",
-      author: "Michael Chen",
+      author: "Rafael Oliveira",
       role: "Dono de Gato e Cão",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=300&auto=format",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format",
       delay: 200
     },
     {
       content: "Meu gato persa exigente precisa de cuidados especiais de higienização, e este aplicativo facilita encontrar profissionais especializados nas necessidades dele. Os perfis detalhados dos pets são perfeitos!",
-      author: "Emily Rodriguez",
+      author: "Júlia Santos",
       role: "Dona de Gato",
       rating: 4,
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format",
+      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format",
       delay: 300
     },
   ];
