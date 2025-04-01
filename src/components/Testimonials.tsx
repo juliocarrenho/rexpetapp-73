@@ -73,7 +73,7 @@ const Testimonials: React.FC = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-pet-dark relative overflow-hidden">
+    <section id="testimonials" className="pt-0 pb-24 bg-pet-dark relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-[20%] right-[5%] w-64 h-64 rounded-full bg-pet-primary blur-3xl"></div>
@@ -81,7 +81,7 @@ const Testimonials: React.FC = () => {
       </div>
       
       <Container maxWidth="full" className="relative z-10">
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4 pt-12">
           <AnimateInView animation="fade-up">
             <h2 className="section-title text-center">What Pet Owners Say</h2>
             <p className="section-subtitle text-center">

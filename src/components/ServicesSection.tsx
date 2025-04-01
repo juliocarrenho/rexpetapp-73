@@ -112,6 +112,9 @@ const ServicesSection: React.FC = () => {
           </React.Fragment>
         ))}
       </div>
+      
+      {/* Add a smooth gradient transition to the next section */}
+      <div className="w-full h-24 bg-gradient-to-b from-pet-secondary to-pet-dark"></div>
     </section>
   );
 };
