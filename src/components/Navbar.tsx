@@ -11,17 +11,24 @@ const Navbar: React.FC = () => {
   const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen);
 
   const navLinks = [
+    { name: 'Download', href: '#top' },
     { name: 'Recursos', href: '#features' },
     { name: 'Serviços', href: '#services' },
-    { name: 'Download', href: '#download' },
     { name: 'Contato', href: '#contact' },
   ];
 
   // Use relative path for the logo
   const logoUrl = "/lovable-uploads/6ff623d7-8f42-46ce-8775-13ff672b8d19.png";
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md w-full">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-md w-full" id="top">
       <Container maxWidth="full">
         <nav className="flex items-center justify-between py-3 max-w-6xl mx-auto px-4">
           <Link to="/" className="flex items-center">
@@ -44,6 +51,7 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={link.href === '#top' ? scrollToTop : undefined}
                 className="text-white hover:text-white transition-colors duration-300 text-sm font-bold"
               >
                 {link.name}
@@ -73,8 +81,14 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => {
+                  if (link.href === '#top') {
+                    e.preventDefault();
+                    scrollToTop();
+                  }
+                  setMobileMenuOpen(false);
+                }}
                 className="text-white hover:text-white transition-colors duration-300 py-1 text-sm font-bold"
-                onClick={() => setMobileMenuOpen(false)}
               >
                 {link.name}
               </a>
