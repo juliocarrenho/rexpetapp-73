@@ -1,9 +1,7 @@
-
 import React from 'react';
 import { Scissors, ShowerHead, Stethoscope, ShoppingBag, Heart, PawPrint } from 'lucide-react';
 import Container from './ui/container';
 import AnimateInView from './AnimateInView';
-
 interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
@@ -11,7 +9,6 @@ interface ServiceCardProps {
   imageSrc: string;
   isEven: boolean;
 }
-
 const ServiceCard: React.FC<ServiceCardProps> = ({
   icon,
   title,
@@ -32,7 +29,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <p className="text-white/80 text-lg">{description}</p>
     </div>
   </AnimateInView>;
-
 const ServicesSection: React.FC = () => {
   const services = [{
     icon: <Scissors size={20} />,
@@ -65,8 +61,7 @@ const ServicesSection: React.FC = () => {
     description: "Localize hotéis e creches para seu pet ficar enquanto você viaja ou trabalha.",
     imageSrc: "/lovable-uploads/f024a96e-a06d-4139-9c53-2b7a1532eab5.png"
   }];
-
-  return <section id="services" className="pt-[50px] w-full bg-pet-secondary relative overflow-hidden md:pt-[40px]">
+  return <section id="services" className="pt-[75px] w-full bg-pet-secondary relative overflow-hidden md:pt-[40px]">
       {/* Add fading transition from the section above */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-pet-dark/90 to-pet-secondary w-full -mt-1"></div>
       
@@ -91,5 +86,4 @@ const ServicesSection: React.FC = () => {
       <div className="w-full h-24 bg-gradient-to-b from-pet-secondary to-pet-dark"></div>
     </section>;
 };
-
 export default ServicesSection;
