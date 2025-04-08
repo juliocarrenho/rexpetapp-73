@@ -47,25 +47,25 @@ const TestimonialCard: React.FC<TestimonialProps> = ({ content, author, role, ra
 const Testimonials: React.FC = () => {
   const testimonials = [
     {
-      content: "Este aplicativo tornou muito mais fácil agendar consultas de higienização para meus dois cães. Os lembretes são ótimos, e adoro poder especificar exatamente quais serviços cada animal precisa.",
+      content: "Encontrei uma excelente clínica veterinária a apenas 2km da minha casa que eu nem sabia que existia! O aplicativo é super intuitivo e as avaliações são muito úteis.",
       author: "Mariana Silva",
-      role: "Dona de Cães",
+      role: "Dona de Cão",
       rating: 5,
       image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=300&auto=format",
       delay: 100
     },
     {
-      content: "Como alguém com uma agenda muito ocupada, este aplicativo tem sido um salvador. Poder marcar consultas e pagar através do aplicativo me economiza muito tempo.",
+      content: "Consegui localizar um pet shop com ótimos preços perto do meu trabalho. As informações sobre os serviços oferecidos e horários de funcionamento são precisas.",
       author: "Rafael Oliveira",
-      role: "Dono de Gato e Cão",
+      role: "Dono de Gato",
       rating: 5,
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format",
       delay: 200
     },
     {
-      content: "Meu gato persa exigente precisa de cuidados especiais de higienização, e este aplicativo facilita encontrar profissionais especializados nas necessidades dele. Os perfis detalhados dos pets são perfeitos!",
+      content: "O filtro por serviços especializados me ajudou a encontrar um lugar que atende animais exóticos. Minha iguana finalmente tem um veterinário de confiança!",
       author: "Júlia Santos",
-      role: "Dona de Gato",
+      role: "Dona de Iguana",
       rating: 4,
       image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=300&auto=format",
       delay: 300
@@ -83,9 +83,9 @@ const Testimonials: React.FC = () => {
       <Container maxWidth="full" className="relative z-10">
         <div className="max-w-6xl mx-auto px-4 pt-12">
           <AnimateInView animation="fade-up">
-            <h2 className="section-title text-center">O Que Dizem os Donos de Pets</h2>
+            <h2 className="section-title text-center">O Que Dizem Nossos Usuários</h2>
             <p className="section-subtitle text-center">
-              Junte-se a milhares de clientes satisfeitos que simplificaram a rotina de cuidados com seus pets
+              Descubra como nosso aplicativo tem ajudado milhares de pessoas a encontrar os melhores serviços para seus pets
             </p>
           </AnimateInView>
           
@@ -106,8 +106,8 @@ const Testimonials: React.FC = () => {
           <AnimateInView animation="fade-up" delay={400} className="mt-16 text-center">
             <div className="glass-panel inline-block px-6 py-4 mx-auto">
               <p className="text-lg text-white/90 font-medium">
-                <span className="text-pet-primary text-2xl font-bold mr-2">4.9</span> 
-                Nota Média de <span className="text-white font-semibold">10.000+</span> Usuários
+                <span className="text-pet-primary text-2xl font-bold mr-2">4.8</span> 
+                Avaliação média de <span className="text-white font-semibold">15.000+</span> Usuários
               </p>
             </div>
           </AnimateInView>

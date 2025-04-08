@@ -1,7 +1,9 @@
+
 import React from 'react';
-import { Scissors, ShowerHead, Heart, Stethoscope, ShoppingBag, PawPrint } from 'lucide-react';
+import { Scissors, ShowerHead, Stethoscope, ShoppingBag, Heart, PawPrint } from 'lucide-react';
 import Container from './ui/container';
 import AnimateInView from './AnimateInView';
+
 interface ServiceCardProps {
   icon: React.ReactNode;
   title: string;
@@ -9,6 +11,7 @@ interface ServiceCardProps {
   imageSrc: string;
   isEven: boolean;
 }
+
 const ServiceCard: React.FC<ServiceCardProps> = ({
   icon,
   title,
@@ -29,46 +32,48 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       <p className="text-white/80 text-lg">{description}</p>
     </div>
   </AnimateInView>;
+
 const ServicesSection: React.FC = () => {
   const services = [{
     icon: <Scissors size={20} />,
-    title: "Tosa Profissional",
-    description: "Cortes personalizados e estilização para deixar seu pet com visual renovado e saudável.",
+    title: "Pet Shops",
+    description: "Encontre as melhores lojas para produtos, acessórios e serviços de beleza para seu pet.",
     imageSrc: "/lovable-uploads/343c60f1-e8c7-4e6c-9f7f-fb9db57dba86.png"
   }, {
     icon: <ShowerHead size={20} />,
-    title: "Banho Completo",
-    description: "Limpeza completa com produtos específicos para cada tipo de pelagem e necessidade.",
+    title: "Banho & Tosa",
+    description: "Localize os estabelecimentos mais bem avaliados para cuidados de higiene do seu animal.",
     imageSrc: "/lovable-uploads/cf16fe67-295f-4110-8486-e03556454822.png"
   }, {
     icon: <Stethoscope size={20} />,
-    title: "Atendimento Veterinário",
-    description: "Consultas, exames e cuidados preventivos para manter a saúde do seu animal em dia.",
+    title: "Clínicas Veterinárias",
+    description: "Encontre veterinários próximos de você para cuidados médicos do seu pet.",
     imageSrc: "/lovable-uploads/ae84501d-a21e-40bb-995e-b8bac8284c1d.png"
   }, {
     icon: <ShoppingBag size={20} />,
-    title: "Pet Shop",
-    description: "Produtos de qualidade para alimentação, higiene, conforto e diversão do seu pet.",
+    title: "Lojas Especializadas",
+    description: "Descubra lojas com produtos específicos para raças ou necessidades especiais.",
     imageSrc: "/lovable-uploads/965b2b79-8bb1-40b7-aec6-c043356a22b8.png"
   }, {
     icon: <Heart size={20} />,
-    title: "Cuidados Especiais",
-    description: "Tratamentos específicos para pets idosos ou com necessidades especiais.",
+    title: "Adoção de Pets",
+    description: "Conheça ONGs e centros de adoção próximos que têm animais precisando de um lar.",
     imageSrc: "/lovable-uploads/63a840e6-d0a1-461e-98cc-80636d38f2fe.png"
   }, {
     icon: <PawPrint size={20} />,
-    title: "Hotel Pet",
-    description: "Hospedagem segura e confortável para seu pet durante suas viagens ou ausências.",
+    title: "Hotéis & Creches",
+    description: "Localize hotéis e creches para seu pet ficar enquanto você viaja ou trabalha.",
     imageSrc: "/lovable-uploads/f024a96e-a06d-4139-9c53-2b7a1532eab5.png"
   }];
+
   return <section id="services" className="pt-[50px] w-full bg-pet-secondary relative overflow-hidden md:pt-[40px]">
       <Container maxWidth="2xl">
         <AnimateInView animation="fade-up">
           <h2 className="text-gradient text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-2">
-            Serviços para seu Pet
+            Encontre Serviços Perto de Você
           </h2>
           <p className="text-white/80 text-center max-w-3xl mx-auto">
-            Descubra todos os serviços de qualidade disponíveis para o bem-estar e cuidado do seu animal de estimação
+            Veja todos os estabelecimentos e serviços para pets disponíveis na sua região
           </p>
         </AnimateInView>
       </Container>
@@ -83,4 +88,5 @@ const ServicesSection: React.FC = () => {
       <div className="w-full h-24 bg-gradient-to-b from-pet-secondary to-pet-dark"></div>
     </section>;
 };
+
 export default ServicesSection;

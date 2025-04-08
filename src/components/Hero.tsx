@@ -15,13 +15,13 @@ const Hero: React.FC = () => {
           <div className="text-center md:text-left md:pl-4">
             <AnimateInView animation="fade-up" delay={200}>
               <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
-                <span className="text-gradient">Cuidados para Pets</span> de Forma Simples
+                <span className="text-gradient">Serviços para Pets</span> ao seu Alcance
               </h1>
             </AnimateInView>
             
             <AnimateInView animation="fade-up" delay={300}>
               <p className="text-lg text-white/80 mb-6">
-                Agende serviços de banho e tosa, encontre serviços locais e mantenha seus pets sempre bonitos.
+                Encontre petshops, veterinários e serviços de qualidade para seu pet, tudo em um só lugar.
               </p>
             </AnimateInView>
             
@@ -59,10 +59,10 @@ const Hero: React.FC = () => {
           <AnimateInView animation="fade-in" delay={300} className="hidden md:block">
             <div className="relative flex justify-end items-center h-full">
               <div className="relative w-[240px] h-[480px] rounded-[30px] border-8 border-black bg-black shadow-app-preview overflow-hidden mr-16">
-                <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1000&auto=format" alt="App de cuidados para pets" className="absolute inset-0 w-full h-full object-cover object-center rounded-[22px]" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=1000&auto=format" alt="App para localizar serviços de pets" className="absolute inset-0 w-full h-full object-cover object-center rounded-[22px]" loading="lazy" />
               </div>
               <div className="absolute right-4 bottom-20 w-[140px] h-[140px] rounded-2xl border-4 border-black bg-black shadow-lg overflow-hidden z-10">
-                <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?q=80&w=800&auto=format" alt="Banho de cachorro" className="w-full h-full object-cover" loading="lazy" />
+                <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?q=80&w=800&auto=format" alt="Serviços para pets" className="w-full h-full object-cover" loading="lazy" />
               </div>
             </div>
           </AnimateInView>

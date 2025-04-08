@@ -1,12 +1,15 @@
+
 import React from 'react';
-import { Calendar, Search, Heart } from 'lucide-react';
+import { MapPin, Search, PawPrint } from 'lucide-react';
 import AnimateInView from './AnimateInView';
 import Container from './ui/container';
+
 interface FeatureItemProps {
   icon: React.ReactNode;
   title: string;
   description: string;
 }
+
 const FeatureItem: React.FC<FeatureItemProps> = ({
   icon,
   title,
@@ -18,26 +21,28 @@ const FeatureItem: React.FC<FeatureItemProps> = ({
     <h3 className="text-xl font-semibold mb-2">{title}</h3>
     <p className="text-white/70">{description}</p>
   </AnimateInView>;
+
 const Features: React.FC = () => {
   const features = [{
-    icon: <Calendar size={22} />,
-    title: "Agendamento Fácil",
-    description: "Agende serviços de banho e tosa com apenas alguns toques."
+    icon: <MapPin size={22} />,
+    title: "Localização Facilitada",
+    description: "Encontre os melhores serviços para pets próximos a você em segundos."
   }, {
     icon: <Search size={22} />,
-    title: "Encontre Serviços",
-    description: "Descubra petshops bem avaliados na sua vizinhança."
+    title: "Filtros Avançados",
+    description: "Busque por tipo de serviço, avaliações e disponibilidade."
   }, {
-    icon: <Heart size={22} />,
-    title: "Perfis de Pets",
-    description: "Acompanhe as preferências e histórico do seu pet."
+    icon: <PawPrint size={22} />,
+    title: "Perfis Completos",
+    description: "Veja fotos, avaliações e detalhes dos serviços oferecidos em cada local."
   }];
+
   return <section id="features" className="w-full py-0">
       <Container maxWidth="full">
         <div className="max-w-6xl mx-auto px-4">
           <AnimateInView animation="fade-up">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Mantenha Seus Pets <span className="text-gradient">Felizes & Limpos</span>
+              Encontre os <span className="text-gradient">Melhores Serviços</span> para Seu Pet
             </h2>
           </AnimateInView>
 
@@ -48,4 +53,5 @@ const Features: React.FC = () => {
       </Container>
     </section>;
 };
+
 export default Features;
